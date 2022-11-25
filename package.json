@@ -1,0 +1,27 @@
+{
+  "name": "auction-house-website-project",
+  "version": "0.0.1",
+  "description": "Auction house website project - Semester project 2 at Noroff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joakimlees/joakim-lee-sletten-semester-project-2.git"
+  },
+  "keywords": [
+    "auction",
+    "bootstrap",
+    "scss",
+    "sass",
+    "javascript",
+    "school-project"
+  ],
+  "author": "Joakim Lee Sletten <joakimlee_sletten@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joakimlees/joakim-lee-sletten-semester-project-2/issues"
+  },
+  "homepage": "https://github.com/joakimlees/joakim-lee-sletten-semester-project-2#readme"
+}
