@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Auction house website project - Semester project 2 at Noroff",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
