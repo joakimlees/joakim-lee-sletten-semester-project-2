@@ -9,7 +9,7 @@ $light: #fffeed;
 $dark: #232326;
 
 $primary: $yellow;
-$secondary: $light;
+$secondary: $green;
 
 // Font customization
 
@@ -21,3 +21,22 @@ font-family: 'Teko', sans-serif;
 */
 
 $btn-font-family: "Teko";
+
+// grid breakpoints and containers
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 600px,
+  lg: 855px,
+  xl: 905px,
+  xxl: 955px,
+);
+
+$container-max-widths: (
+  sm: 450px,
+  md: 620px,
+  lg: 850px,
+  xl: 900px,
+  xxl: 950px,
+);
