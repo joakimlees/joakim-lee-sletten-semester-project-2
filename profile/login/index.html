@@ -11,27 +11,39 @@
   </head>
   <body>
     <div class="vh-100 d-flex flex-column bg-dark text-white">
-      <header class="container-fluid text-center">
-        <div class="text-primary pt-2 pb-2">Auction House</div>
+      <header class="container-fluid text-center pt-3 pb-1">
+        <a class="text-primary text-decoration-none display-4" href="#">Auction House</a>
       </header>
-      <div class="container ps-2 pe-2 flex-grow-1 bg-primary text-dark border border-5 border-danger">
-        <nav role="navigation" class="bg-dark navbar border justify-content-center">
-          <ul class="container-fluid justify-content-around border border-danger border-1 navbar-nav flex-row">
+      <div class="container ps-2 pe-2 flex-grow-1">
+        <nav role="navigation" class="bg-dark navbar justify-content-center">
+          <ul class="container-fluid justify-content-around navbar-nav flex-row">
             <li class="nav-item">
-              <a class="bi bi-heart nav-link" href="#"></a>
+              <a class="bi bi-house-door text-light nav-link d-flex flex-column text-center" href="#">Listings</a>
             </li>
             <li class="nav-item">
-              <a class="bi bi-heart nav-link" href="#"></a>
+              <a class="bi bi-heart text-light nav-link d-flex flex-column text-center" href="#">Favorites</a>
             </li>
             <li class="nav-item">
-              <a class="bi bi-heart nav-link" href="#"></a>
+              <a class="bi bi-person text-light nav-link d-flex flex-column text-center" href="#">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="bi bi-heart nav-link" href="#"></a>
+              <a class="bi bi-box-arrow-left text-light nav-link d-flex flex-column text-center" href="#">Logout</a>
             </li>
           </ul>
         </nav>
-        <main>main content</main>
+        <main class="ps-4 pe-4">
+          <h1 class="text-primary text-center">Login</h1>
+          <form action="#">
+            <label for="email">Email</label>
+            <input class="form-control" type="email" />
+            <label for="password">Password</label>
+            <input class="form-control" type="password" />
+            <div class="d-flex">
+              <button class="btn btn-secondary w-100">Login</button>
+              <button class="btn btn-secondary w-100">Login</button>
+            </div>
+          </form>
+        </main>
       </div>
       <footer class="container-fluid">footer</footer>
     </div>
