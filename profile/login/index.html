@@ -12,7 +12,7 @@
   <body>
     <div class="vh-100 d-flex flex-column bg-dark text-white">
       <header class="container-fluid text-center pt-3 pb-1">
-        <a class="text-primary text-decoration-none display-4" href="#">Auction House</a>
+        <a class="text-primary text-decoration-none h6" href="#">Auction House</a>
       </header>
       <div class="container ps-2 pe-2 flex-grow-1">
         <nav role="navigation" class="bg-dark navbar justify-content-center">
@@ -34,17 +34,19 @@
         <main class="ps-4 pe-4">
           <h1 class="text-primary text-center">Login</h1>
           <form class="custom-container-sm mx-auto" action="#">
-            <label for="email">Email</label>
+            <label class="display-4" for="email">Email</label>
             <input class="form-control" type="email" />
-            <label for="password">Password</label>
+            <label class="display-4" for="password">Password</label>
             <input class="form-control" type="password" />
-
             <button class="btn btn-secondary w-100 mt-3">Login</button>
-            <button class="btn btn-primary w-100 mt-3">Login</button>
+            <div class="text-white text-center mt-4">Don't have an account?</div>
+            <button class="btn btn-primary w-100">Register</button>
           </form>
         </main>
       </div>
-      <footer class="container-fluid">footer</footer>
+      <footer class="container-fluid bg-light text-black">
+        <p class="container pt-5 pb-5 h6">Auction House</p>
+      </footer>
     </div>
   </body>
 </html>
