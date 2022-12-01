@@ -10,6 +10,11 @@ font-family: 'Teko', sans-serif;
   max-width: 420px;
 }
 
+.custom-image-container-md {
+  width: auto;
+  max-width: 250px;
+}
+
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
