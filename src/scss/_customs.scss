@@ -17,4 +17,8 @@
   @include custom-container-width(auto, 250px);
 }
 
+.custom-image-container {
+  @include custom-container-width(auto, 200px);
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
