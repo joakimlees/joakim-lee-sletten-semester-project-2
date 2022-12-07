@@ -21,4 +21,14 @@
   @include custom-container-width(auto, 270px);
 }
 
+/*
+.help {
+  display: none;
+}
+
+input:invalid + .help {
+  display: block;
+}
+*/
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
