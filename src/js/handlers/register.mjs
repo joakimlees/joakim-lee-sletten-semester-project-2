@@ -9,8 +9,8 @@ export function registerForm() {
     const form = event.target;
     const formData = new FormData(form);
     const profile = Object.fromEntries(formData.entries());
-    const action = form.attributes.action.nodeValue;
     const method = form.method;
+    const action = form.attributes.action.value;
     register(profile, action, method);
   });
 }
