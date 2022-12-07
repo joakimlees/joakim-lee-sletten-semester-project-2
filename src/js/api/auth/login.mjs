@@ -1,11 +1,11 @@
 import { API_AUCTION_URL } from "../constants.mjs";
 
-export async function register(profile, action, method) {
-  const registerURL = API_AUCTION_URL + action;
+export async function login(profile, action, method) {
+  const loginURL = API_AUCTION_URL + action;
 
   const body = JSON.stringify(profile);
 
-  const response = await fetch(registerURL, {
+  const response = await fetch(loginURL, {
     headers: {
       "Content-Type": "application/json",
     },
