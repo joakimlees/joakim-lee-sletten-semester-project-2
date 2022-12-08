@@ -1,13 +1,13 @@
-import { registerForm } from "./handlers/register.mjs";
-import { loginForm } from "./handlers/login.mjs";
+import { setForm } from "./handlers/userAccount.mjs";
+import * as form from "./formVariables/index.mjs";
 
 const path = location.pathname;
 
 switch (path) {
   case "/profile/register/":
-    registerForm();
+    setForm(form.register);
     break;
   case "/profile/login/":
-    loginForm();
+    setForm(form.login);
     break;
 }
