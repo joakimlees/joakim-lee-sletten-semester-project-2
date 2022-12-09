@@ -4,16 +4,14 @@ import { apiRequest } from "../components/fetch.mjs";
 /**
  * Sends a request to the AUCTION API/server, using the apiRequest function.
  * Setting the fetch() options for the request.
+ * @param {object} profile object - containing key, value paris, which makes out the "body" in the fetch() options, i.e. user information such as: name, email, password etc.
+ * @param {string} action string - a API URL endpoint, for sending/receiving data to/from.
+ * @param {string} method string - method for the fetch() options, i.e. GET, POST, PUT, PATCH, DELETE.
  *
- * @param {object} profile containing key, value paris, which makes
- * out the "body" in the fetch() options, i.e. user information such as: name, email, password etc.
- * @param {string} action a API URL endpoint, for sending/receiving data to/from.
- * @param {string} method method for the fetch() options, i.e. GET, POST, PUT, PATCH, DELETE.
- *
- * * @example
+ * @example
  * ```js
- * // Sends a request to the AUCTION API/server.
- * Setting the fetch() options for the request.
+ * //Sends a request to the AUCTION API/server.
+ * //Setting the fetch() options for the request.
  *
  * const profile = {
  * name: yourName,
