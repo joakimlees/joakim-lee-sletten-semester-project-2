@@ -1,21 +1,18 @@
 import { API_AUCTION_URL } from "../constants.mjs";
+import { apiRequest } from "../components/fetch.mjs";
 
 export async function authUser(profile, action, method) {
   const authURL = API_AUCTION_URL + action;
-
+  const headers = { "Content-Type": "application/json" };
   const body = JSON.stringify(profile);
 
-  const response = await fetch(authURL, {
-    headers: {
-      "Content-Type": "application/json",
-    },
+  const authOptions = {
+    headers,
     method,
     body,
-  });
+  };
 
-  const result = await response.json();
-  console.log("auth func triggers");
-  console.log(result);
+  apiRequest(authURL, authOptions);
 }
 
 /*
@@ -24,4 +21,7 @@ email oakless@stud.noroff.no
 
 ross_geller
 ross_geller@stud.noroff.no
+
+turbo_lees
+turbo_lees@stud.noroff.no
 */
