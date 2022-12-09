@@ -1,4 +1,4 @@
-import { formListener } from "./handlers/userAccount.mjs";
+import { formListener } from "./handlers/userData.mjs";
 import * as form from "./formVariables/index.mjs";
 
 const path = location.pathname;
