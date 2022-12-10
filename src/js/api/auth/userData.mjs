@@ -1,5 +1,7 @@
 import { API_AUCTION_URL } from "../constants.mjs";
 import { apiRequest } from "../components/fetch.mjs";
+import * as storage from "../../storage/index.mjs";
+import * as domain from "../../domains/index.mjs";
 
 /**
  * Sends a request to the AUCTION API/server, using the apiRequest function.
@@ -38,6 +40,13 @@ export async function authUser(profile, action, method) {
     method,
     body,
   };
+
+  if (action === "/auth/login") {
+    const { accessToken, ...user } = await apiRequest(authURL, authOptions);
+
+    storage.save("token", accessToken);
+    storage.save("profile", new domain.UserObject(user.id, user.name, user.email, user.avatar));
+  }
 
   apiRequest(authURL, authOptions);
 }
