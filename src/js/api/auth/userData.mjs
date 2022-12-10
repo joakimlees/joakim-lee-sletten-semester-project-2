@@ -45,7 +45,7 @@ export async function authUser(profile, action, method) {
     const { accessToken, ...user } = await apiRequest(authURL, authOptions);
 
     storage.save("token", accessToken);
-    storage.save("profile", new domain.UserObject(user.id, user.name, user.email, user.avatar));
+    storage.save("profile", new domain.UserObject(user.name, user.email, user.credits, user.avatar));
   }
 
   apiRequest(authURL, authOptions);
