@@ -12,7 +12,7 @@ export function createListing(listingForm) {
 
     const title = formData.get("title");
     const description = formData.get("description");
-    const images = formData.get("images").split(", ");
+    //const images = formData.get("images").split(", ");
     const endDate = new Date(formData.get("endsAt"));
 
     const listing = {
