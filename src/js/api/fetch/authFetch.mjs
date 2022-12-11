@@ -8,10 +8,10 @@ export async function authorizedApiRequest(URL, options) {
     });
     const result = await response.json();
 
-    return result;
+    return console.log(result);
   } catch (error) {
     return error;
   } finally {
-    console.log("dev note: javascript fetch() method finished");
+    console.log("dev note: javascript fetch(auth) method finished");
   }
 }

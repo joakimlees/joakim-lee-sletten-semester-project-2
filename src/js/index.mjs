@@ -1,7 +1,18 @@
 import "./router.mjs";
 
-console.log("hello");
+const testForm = document.querySelector("#createListingForm");
 
-const date = new Date("02.05.2022");
+testForm.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-console.log(date);
+  const form = event.target;
+  const formData = new FormData(form);
+  const listingDetails = Object.fromEntries(formData.entries());
+  console.log(listingDetails.endsAt);
+  const endDate = new Date(listingDetails.endsAt);
+  console.log(endDate);
+  const method = form.method;
+  const action = form.attributes.action.value;
+
+  console.log(listingDetails);
+});
