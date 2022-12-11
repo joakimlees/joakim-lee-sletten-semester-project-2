@@ -1,19 +1,10 @@
-import { load } from "../../storage/index.mjs";
-
-export function headers() {
-  const token = load("token");
-
-  return {
-    "Content-Type": "application/json",
-    Authorization: `Bearer ${token}`,
-  };
-}
+import { authHeaders } from "../auth/authHeaders.mjs";
 
 export async function authorizedApiRequest(URL, options) {
   try {
     const response = await fetch(URL, {
       ...options,
-      headers: headers(),
+      headers: authHeaders(),
     });
     const result = await response.json();
 
