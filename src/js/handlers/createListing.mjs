@@ -5,11 +5,22 @@ export function createListing(listingForm) {
     event.preventDefault();
 
     const form = event.target;
-    const formData = new FormData(form);
-    const profile = Object.fromEntries(formData.entries());
     const method = form.method;
     const action = form.attributes.action.value;
 
-    create(profile, method, action);
+    const formData = new FormData(form);
+
+    const title = formData.get("title");
+    const description = formData.get("description");
+    const images = formData.get("images").split(", ");
+    const endDate = new Date(formData.get("endsAt"));
+
+    const listing = {
+      title: title,
+      description: description,
+      endsAt: endDate,
+    };
+
+    create(listing, action, method);
   });
 }

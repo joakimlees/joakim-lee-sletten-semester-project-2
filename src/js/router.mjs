@@ -11,8 +11,8 @@ switch (path) {
   case "/profile/login/":
     formListener(form.login);
     break;
-  /*
+
   case "/listings/create-listing/":
     createListing(form.createListing);
-    break;*/
+    break;
 }

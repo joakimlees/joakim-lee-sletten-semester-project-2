@@ -10,7 +10,7 @@ export async function authorizedApiRequest(URL, options) {
 
     return console.log(result);
   } catch (error) {
-    return error;
+    return console.log(error);
   } finally {
     console.log("dev note: javascript fetch(auth) method finished");
   }
