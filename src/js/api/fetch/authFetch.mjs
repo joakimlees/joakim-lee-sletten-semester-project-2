@@ -1,4 +1,4 @@
-import { authHeaders } from "../auth/authHeaders.mjs";
+import { authHeaders } from "../components/authHeaders.mjs";
 
 export async function authorizedApiRequest(URL, options) {
   try {

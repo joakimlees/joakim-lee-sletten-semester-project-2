@@ -1,5 +1,5 @@
 import { API_AUCTION_URL } from "../constants.mjs";
-import { apiRequest } from "../components/fetch.mjs";
+import { apiRequest } from "../fetch/fetch.mjs";
 import * as storage from "../../storage/index.mjs";
 import * as domain from "../../domains/index.mjs";
 
@@ -46,9 +46,9 @@ export async function authUser(profile, action, method) {
 
     storage.save("token", accessToken);
     storage.save("profile", new domain.UserObject(user.name, user.email, user.credits, user.avatar));
+  } else {
+    apiRequest(authURL, authOptions);
   }
-
-  apiRequest(authURL, authOptions);
 }
 
 /*

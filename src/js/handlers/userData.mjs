@@ -1,4 +1,4 @@
-import { authUser } from "../api/auth/userData.mjs";
+import { authUser } from "../api/user/userData.mjs";
 
 /**
  * On a submit event, the authUser function is called with the arguments:
