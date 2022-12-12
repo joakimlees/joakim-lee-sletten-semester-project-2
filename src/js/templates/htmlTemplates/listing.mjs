@@ -1,4 +1,4 @@
-export function createListingHtml(listingDetails) {
+export function template(listingDetails) {
   const parser = new DOMParser();
 
   const listingHtml = parser.parseFromString(
@@ -33,6 +33,7 @@ export function createListingHtml(listingDetails) {
     "text/html"
   );
 
+  /*
   const listingMainImage = listingHtml.getElementById("listing-main-image");
   listingMainImage.src = listingDetails.media[0];
   listingMainImage.alt = listingDetails.title;
@@ -45,8 +46,8 @@ export function createListingHtml(listingDetails) {
 
   const bid = listingHtml.getElementById("bid");
   bid.textContent = listingDetails.bids[-1].amount;
-
-  //return console.log(listingHtml.body.outerHTML);
+*/
+  return console.log(typeof listingHtml.body.outerHTML);
 }
 
 /*

@@ -3,6 +3,8 @@ import * as form from "./formVariables/index.mjs";
 import { createListing } from "./handlers/createListing.mjs";
 import { getListing } from "./api/listings/read.mjs";
 import { getListings } from "./api/listings/read.mjs";
+import { listing } from "./templates/listings.mjs";
+import { template } from "./templates/htmlTemplates/listing.mjs";
 
 const path = location.pathname;
 
@@ -19,6 +21,7 @@ switch (path) {
     break;
 }
 
-getListing("535cd966-40d6-4087-8a5c-bfc1212580bc");
+//getListing("535cd966-40d6-4087-8a5c-bfc1212580bc");
 
-getListings();
+//listing();
+template();
