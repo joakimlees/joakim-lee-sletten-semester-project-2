@@ -10,7 +10,7 @@ export async function apiRequest(URL, options) {
     const response = await fetch(URL, options);
     const result = await response.json();
 
-    return result;
+    return console.log(result);
   } catch (error) {
     return error;
   } finally {
