@@ -1,26 +1,25 @@
-export function createListingHtml() {
+export function createListingHtml(listingDetails) {
   const parser = new DOMParser();
 
   const listingHtml = parser.parseFromString(
     `
               <div class="d-flex flex-column custom-card-container shadow-sm p-3">
-              <h4 id="h4-test">This is a test</h4>
                 <div class="mx-auto flex-grow-1">
-                  <img class="w-100" src="/test-image.jpg" alt="test" />
+                  <img class="w-100" src="${listingDetails.media[0]}" alt="${listingDetails.title}" />
                 </div>
                 <div>
                   <div class="row mt-4">
-                    <h3 class="text-primary col-10 text-start">Card Item Title</h3>
-                    <p class="col-2 bi bi-heart-fill text-success text-end"></p>
+                    <h3 class="text-primary col-10 text-start">${listingDetails.title}</h3>
+                    <p id="fav-icon" class="col-2 bi text-end"></p>
                   </div>
                   <div class="row mt-3">
                     <p class="col">
-                      Ends in: <br />
-                      <span class="text-danger"> 1d 12h 03m</span>
+                      Ends at: <br />
+                      <span class="text-danger">${listingDetails.endsAt}</span>
                     </p>
                     <p class="col">
                       Current Bid: <br />
-                      <span class="text-success">322</span>
+                      <span class="text-success">${listingDetails._count.bid}</span>
                     </p>
                   </div>
                   <div class="row mt-2">
@@ -38,7 +37,7 @@ export function createListingHtml() {
 
   title.innerHTML = "new title HAHAHAHAH";
 
-  return console.log(listingHtml.body.outerHTML);
+  //return console.log(listingHtml.body.outerHTML);
 }
 
 /*
