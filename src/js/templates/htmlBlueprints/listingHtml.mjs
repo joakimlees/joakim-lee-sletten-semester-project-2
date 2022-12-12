@@ -1,10 +1,10 @@
-const parser = new DOMParser();
+export function createListingHtml() {
+  const parser = new DOMParser();
 
-export const listingHtml = parser.parseFromString(
-  `
-
-
+  const listingHtml = parser.parseFromString(
+    `
               <div class="d-flex flex-column custom-card-container shadow-sm p-3">
+              <h4 id="h4-test">This is a test</h4>
                 <div class="mx-auto flex-grow-1">
                   <img class="w-100" src="/test-image.jpg" alt="test" />
                 </div>
@@ -29,9 +29,28 @@ export const listingHtml = parser.parseFromString(
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>`,
 
+    "text/html"
+  );
 
-`,
-  "text/html"
-);
+  const title = listingHtml.getElementById("h4-test");
+
+  title.innerHTML = "new title HAHAHAHAH";
+
+  return console.log(listingHtml.body.outerHTML);
+}
+
+/*
+console.log(listingHtml);
+
+const testCon = document.querySelector("#testContainer");
+
+console.log(listingHtml);
+
+const htmlTest = listingHtml.body.outerHTML.slice(6, -7);
+
+console.log("this is the test " + htmlTest);
+
+testCon.innerHTML = listingHtml.body.outerHTML;
+*/
