@@ -5,21 +5,21 @@ export function createListingHtml(listingDetails) {
     `
               <div class="d-flex flex-column custom-card-container shadow-sm p-3">
                 <div class="mx-auto flex-grow-1">
-                  <img class="w-100" src="${listingDetails.media[0]}" alt="${listingDetails.title}" />
+                  <img id="listing-main-image" class="w-100" />
                 </div>
                 <div>
                   <div class="row mt-4">
-                    <h3 class="text-primary col-10 text-start">${listingDetails.title}</h3>
+                    <h3 id="listing-title" class="text-primary col-10 text-start"></h3>
                     <p id="fav-icon" class="col-2 bi text-end"></p>
                   </div>
                   <div class="row mt-3">
                     <p class="col">
                       Ends at: <br />
-                      <span class="text-danger">${listingDetails.endsAt}</span>
+                      <span id="ends" class="text-danger"></span>
                     </p>
                     <p class="col">
                       Current Bid: <br />
-                      <span class="text-success">${listingDetails._count.bid}</span>
+                      <span id="bid" class="text-success"></span>
                     </p>
                   </div>
                   <div class="row mt-2">
@@ -33,9 +33,18 @@ export function createListingHtml(listingDetails) {
     "text/html"
   );
 
-  const title = listingHtml.getElementById("h4-test");
+  const listingMainImage = listingHtml.getElementById("listing-main-image");
+  listingMainImage.src = listingDetails.media[0];
+  listingMainImage.alt = listingDetails.title;
 
-  title.innerHTML = "new title HAHAHAHAH";
+  const listingTitle = listingHtml.getElementById("listing-title");
+  listingTitle.textContent = listingDetails.title;
+
+  const ends = listingHtml.getElementById("ends");
+  ends.textContent = listingHtml.endsAt;
+
+  const bid = listingHtml.getElementById("bid");
+  bid.textContent = listingDetails.bids[-1].amount;
 
   //return console.log(listingHtml.body.outerHTML);
 }
