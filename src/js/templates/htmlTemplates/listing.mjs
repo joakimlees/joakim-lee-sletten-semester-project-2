@@ -33,21 +33,21 @@ export function template(listingDetails) {
     "text/html"
   );
 
-  /*
   const listingMainImage = listingHtml.getElementById("listing-main-image");
   listingMainImage.src = listingDetails.media[0];
-  listingMainImage.alt = listingDetails.title;
+  listingMainImage.alt = "image of " + listingDetails.title;
 
   const listingTitle = listingHtml.getElementById("listing-title");
-  listingTitle.textContent = listingDetails.title;
+  listingTitle.innerHTML = listingDetails.title;
 
   const ends = listingHtml.getElementById("ends");
-  ends.textContent = listingHtml.endsAt;
+  const date = listingDetails.endsAt.slice(0, -14);
+  const time = listingDetails.endsAt.slice(11, -5);
+  ends.innerHTML = date + " " + time;
+  //const bid = listingHtml.getElementById("bid");
+  //bid.textContent = listingDetails.bids[-1].amount;
 
-  const bid = listingHtml.getElementById("bid");
-  bid.textContent = listingDetails.bids[-1].amount;
-*/
-  return console.log(typeof listingHtml.body.outerHTML);
+  return listingHtml.body.firstChild;
 }
 
 /*

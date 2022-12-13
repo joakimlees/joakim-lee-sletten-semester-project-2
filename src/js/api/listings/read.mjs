@@ -3,10 +3,14 @@ import { apiRequest } from "../fetch/fetch.mjs";
 
 export function getListings() {
   const listingsURL = API_AUCTION_URL + "/listings" + "?_seller=true&_bids=true";
-  apiRequest(listingsURL);
+  const listOfListings = apiRequest(listingsURL);
+
+  return listOfListings;
 }
 
 export function getListing(id) {
   const listingURL = API_AUCTION_URL + "/listings/" + id + "?_seller=true&_bids=true";
-  apiRequest(listingURL);
+  const specificListing = apiRequest(listingURL);
+
+  return specificListing;
 }
