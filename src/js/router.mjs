@@ -2,6 +2,7 @@ import { formListener } from "./handlers/userData.mjs";
 import * as form from "./formVariables/index.mjs";
 import { createListing } from "./handlers/createListing.mjs";
 import { displayListings } from "./templates/listings.mjs";
+import { listingTemplate } from "./templates/htmlTemplates/listing.mjs";
 
 const path = location.pathname;
 
@@ -19,3 +20,5 @@ switch (path) {
     createListing(form.createListing);
     break;
 }
+
+listingTemplate();
