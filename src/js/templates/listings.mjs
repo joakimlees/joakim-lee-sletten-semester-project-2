@@ -3,7 +3,7 @@ import { getListings } from "../api/listings/read.mjs";
 
 export async function displayListings() {
   const container = document.querySelector("#listings-container");
-  const tester = await getListings();
+  const listData = await getListings();
 
-  render(tester, container);
+  render(listData, container);
 }
