@@ -1,9 +1,9 @@
-import { render } from "./renderers/listing.mjs";
+import { renderListings } from "./renderers/listings.mjs";
 import { getListings } from "../api/listings/read.mjs";
 
 export async function displayListings() {
   const container = document.querySelector("#listings-container");
-  const listData = await getListings();
+  const listingsData = await getListings();
 
-  render(listData, container);
+  renderListings(listingsData, container);
 }

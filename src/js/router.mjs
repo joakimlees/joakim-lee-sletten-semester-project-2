@@ -12,10 +12,10 @@ switch (path) {
   case "/profile/login/":
     formListener(form.login);
     break;
-
+  case "/listings/":
+    displayListings();
+    break;
   case "/listings/create-listing/":
     createListing(form.createListing);
     break;
 }
-
-displayListings();

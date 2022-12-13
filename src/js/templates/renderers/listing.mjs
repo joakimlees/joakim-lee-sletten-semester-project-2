@@ -1,5 +1,6 @@
-import { listingTemplate } from "../htmlTemplates/listing.mjs";
+/*import { listingTemplate } from "../htmlTemplates/listing.mjs";
 
-export function render(getList, parent) {
-  parent.append(...getList.map(listingTemplate));
+export function renderListing(getListing, parent) {
+  parent.append(listingTemplate(getListing));
 }
+*/

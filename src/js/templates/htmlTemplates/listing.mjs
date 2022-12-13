@@ -1,4 +1,4 @@
-export function listingTemplate(listingDetails) {
+export function listingsTemplate(listingDetails) {
   const parser = new DOMParser();
 
   const listingHtml = parser.parseFromString(
