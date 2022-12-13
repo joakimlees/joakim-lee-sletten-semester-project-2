@@ -44,8 +44,18 @@ export function template(listingDetails) {
   const date = listingDetails.endsAt.slice(0, -14);
   const time = listingDetails.endsAt.slice(11, -5);
   ends.innerHTML = date + " " + time;
-  //const bid = listingHtml.getElementById("bid");
-  //bid.textContent = listingDetails.bids[-1].amount;
+
+  const bidContainer = listingHtml.getElementById("bid");
+  const bids = listingDetails.bids;
+  if (listingDetails.bids.length === 0) {
+    bidContainer.innerHTML = "no bids yet";
+  } else if (listingDetails.bids.length === 1) {
+    bidContainer.innerHTML = JSON.stringify(bids[0].amount);
+  } else {
+    const lastBidAmount = bids[bids.length - 1].amount;
+    const last = JSON.stringify(lastBidAmount);
+    bidContainer.innerHTML = last;
+  }
 
   return listingHtml.body.firstChild;
 }

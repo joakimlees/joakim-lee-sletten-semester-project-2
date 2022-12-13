@@ -8,7 +8,7 @@ export async function authorizedApiRequest(URL, options) {
     });
     const result = await response.json();
 
-    return console.log(result);
+    return result;
   } catch (error) {
     return console.log(error);
   } finally {

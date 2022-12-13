@@ -24,14 +24,13 @@ displayListings();
 
 //getListing("535cd966-40d6-4087-8a5c-bfc1212580bc");
 
-const test = await getListings();
-const item = test[0].media;
-const last = item[item.length - 1];
+getListings().then(console.log);
+const details = await getListings();
+const bids = details[90].bids.length;
+//const lastBidAmount = bids[bids.length - 1].amount;
+//const last = JSON.stringify(lastBidAmount);
 
-console.log(last);
-console.log(test[0].media);
-
-console.log(test[0].endsAt);
+console.log(bids);
 
 /*
 const test = await getListings();
