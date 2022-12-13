@@ -42,19 +42,23 @@ export function template(listingDetails) {
 
   const ends = listingHtml.getElementById("ends");
   const date = listingDetails.endsAt.slice(0, -14);
-  const time = listingDetails.endsAt.slice(11, -5);
+  const time = listingDetails.endsAt.slice(11, -8);
   ends.innerHTML = date + " " + time;
 
   const bidContainer = listingHtml.getElementById("bid");
   const bids = listingDetails.bids;
-  if (listingDetails.bids.length === 0) {
-    bidContainer.innerHTML = "no bids yet";
-  } else if (listingDetails.bids.length === 1) {
-    bidContainer.innerHTML = JSON.stringify(bids[0].amount);
-  } else {
-    const lastBidAmount = bids[bids.length - 1].amount;
-    const last = JSON.stringify(lastBidAmount);
-    bidContainer.innerHTML = last;
+
+  switch (bids.length) {
+    case 0:
+      bidContainer.innerHTML = "no bids yet";
+      break;
+    case 1:
+      bidContainer.innerHTML = JSON.stringify(bids[0].amount) + ",-";
+      break;
+    default:
+      const lastBid = bids[bids.length - 1].amount;
+      const bidAmount = JSON.stringify(lastBid);
+      bidContainer.innerHTML = bidAmount + ",-";
   }
 
   return listingHtml.body.firstChild;
