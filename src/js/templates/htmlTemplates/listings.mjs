@@ -24,7 +24,7 @@ export function listingsTemplate(listingsDetails) {
                   </div>
                   <div class="row mt-2">
                     <div class="col">
-                      <button class="btn btn-light w-100">Button</button>
+                      <a id="view-listing-btn" class="btn btn-light w-100">View listing</a>
                     </div>
                   </div>
                 </div>
@@ -60,6 +60,9 @@ export function listingsTemplate(listingsDetails) {
       const bidAmount = JSON.stringify(lastBid);
       bidContainer.innerHTML = bidAmount + ",-";
   }
+
+  const viewBtn = listingHtml.getElementById("view-listing-btn");
+  viewBtn.href = `/listings/listing/?id=${listingsDetails.id}`;
 
   return listingHtml.body.firstChild;
 }
