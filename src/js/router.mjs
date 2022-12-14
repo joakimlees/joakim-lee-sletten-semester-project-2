@@ -32,6 +32,6 @@ switch (path) {
 
 const test = await getListing("f029b494-6327-44b4-930b-1872f1f2b087");
 
-console.log(test.media);
+console.log(test.bids);
 
-//getListings().then(console.log);
+getListings().then(console.log);

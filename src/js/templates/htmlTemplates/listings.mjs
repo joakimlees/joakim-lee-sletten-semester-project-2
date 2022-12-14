@@ -6,6 +6,7 @@ export function listingsTemplate(listingsDetails) {
   const listingHtml = generatedListingsHtml();
 
   const listingMainImage = listingHtml.getElementById("listing-main-image");
+
   listingMainImage.src = listingsDetails.media[0];
   listingMainImage.alt = "image of " + listingsDetails.title;
 
