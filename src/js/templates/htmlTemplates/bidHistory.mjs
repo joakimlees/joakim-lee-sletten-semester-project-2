@@ -45,7 +45,7 @@ export function bidHistory(listingDetails) {
     amount.innerHTML = "Amount: ";
     amountName.innerHTML = amountName.innerHTML + JSON.stringify(bid.amount);
     time.innerHTML = "Placed: ";
-    timeName.innerHTML = timeName.innerHTML + bid.created;
+    sliceEndsAt(bid.created, timeName);
 
     bidHistoryContainer.appendChild(bidWrapper);
 
