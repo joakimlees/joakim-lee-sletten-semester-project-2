@@ -1,10 +1,10 @@
 export function singleListing(listingDetails) {
-  const title = document.getElementById("#title");
-  const mainImage = document.getElementById("#mainImage");
-  const seller = document.getElementById("#seller");
-  const endsAt = document.getElementById("#endsAt");
-  const bidContainer = document.getElementById("#bidContainer");
-  const description = document.getElementById("#description");
+  const title = document.getElementById("title");
+  const mainImage = document.getElementById("mainImage");
+  const seller = document.getElementById("seller");
+  const endsAt = document.getElementById("endsAt");
+  const bidContainer = document.getElementById("bidContainer");
+  const description = document.getElementById("description");
   //const imagesContainer = document.getElementById("#imagesContainer");
 
   title.innerHTML = listingDetails.title;
