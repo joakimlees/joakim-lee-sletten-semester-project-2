@@ -13,9 +13,7 @@ export function placeBid(bidForm) {
 
     const number = form[0].valueAsNumber;
 
-    const bidItem = {
-      amount: number,
-    };
+    const bidItem = JSON.stringify({ amount: number });
 
     bid(bidItem, id, action, method);
   });
