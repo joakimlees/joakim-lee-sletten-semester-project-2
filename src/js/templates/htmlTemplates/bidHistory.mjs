@@ -18,8 +18,6 @@ export function bidHistory(listingDetails) {
   const bids = listingDetails.bids;
   getHighestBid(bids, bidContainer);
 
-  console.log(listingDetails.bids);
-
   const bidsArray = listingDetails.bids;
   bidsArray.map((bid) => {
     const bidWrapper = document.createElement("li");
