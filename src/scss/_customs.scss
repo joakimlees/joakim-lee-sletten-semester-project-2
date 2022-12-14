@@ -9,6 +9,11 @@
   max-width: $max-width;
 }
 
+@mixin custom-container-height($height, $max-height) {
+  height: $height;
+  max-height: $max-height;
+}
+
 .custom-container-sm {
   @include custom-container-width(auto, 420px);
 }
@@ -19,6 +24,10 @@
 
 .custom-card-container {
   @include custom-container-width(auto, 270px);
+}
+
+.custom-image-container-height {
+  @include custom-container-height(auto, 150px);
 }
 
 /*

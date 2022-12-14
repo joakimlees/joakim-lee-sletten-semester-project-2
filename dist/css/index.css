@@ -20,6 +20,11 @@ font-family: 'Teko', sans-serif;
   max-width: 270px;
 }
 
+.custom-image-container-height {
+  height: auto;
+  max-height: 150px;
+}
+
 /*
 .help {
   display: none;

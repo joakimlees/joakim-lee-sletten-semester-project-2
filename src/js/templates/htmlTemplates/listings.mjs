@@ -4,8 +4,8 @@ export function listingsTemplate(listingsDetails) {
   const listingHtml = parser.parseFromString(
     `
               <div class="d-flex flex-column custom-card-container shadow-sm p-3">
-                <div class="mx-auto flex-grow-1">
-                  <img id="listing-main-image" class="w-100" />
+                <div class="mx-auto d-flex flex-grow-1">
+                  <img id="listing-main-image" class="w-100 custom-image-container-height my-auto" />
                 </div>
                 <div>
                   <div class="row mt-4">
