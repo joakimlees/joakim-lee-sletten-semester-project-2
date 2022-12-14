@@ -1,3 +1,6 @@
+import { sliceEndsAt } from "./components/endsAt.mjs";
+import { getHighestBid } from "./components/bids.mjs";
+
 export function singleListing(listingDetails) {
   const title = document.getElementById("title");
   const mainImage = document.getElementById("mainImage");
@@ -12,34 +15,20 @@ export function singleListing(listingDetails) {
   seller.innerHTML = listingDetails.seller.name;
   description.innerHTML = listingDetails.description;
 
-  const date = listingDetails.endsAt.slice(0, -14);
-  const time = listingDetails.endsAt.slice(11, -8);
-  endsAt.innerHTML = date + " " + time;
+  sliceEndsAt(listingDetails, endsAt);
 
   const bids = listingDetails.bids;
+  getHighestBid(bids, bidContainer);
 
-  switch (bids.length) {
-    case 0:
-      bidContainer.innerHTML = "no bids yet";
-      break;
-    case 1:
-      bidContainer.innerHTML = JSON.stringify(bids[0].amount) + ",-";
-      break;
-    default:
-      const lastBid = bids[bids.length - 1].amount;
-      const bidAmount = JSON.stringify(lastBid);
-      bidContainer.innerHTML = bidAmount + ",-";
-  }
-
-  const testItem = listingDetails.media;
-  testItem.map((url) => {
+  const imagesArray = listingDetails.media;
+  imagesArray.map((imageUrl) => {
     const imageWrapper = document.createElement("div");
     const image = document.createElement("img");
 
     imageWrapper.classList.add("mx-auto", "my-4");
     image.classList.add("w-100");
     imageWrapper.appendChild(image);
-    image.src = url;
+    image.src = imageUrl;
     image.alt = "Additional image of " + listingDetails.title;
     imagesContainer.appendChild(imageWrapper);
 
