@@ -7,12 +7,14 @@ export function singleListing(listingDetails) {
   const seller = document.getElementById("seller");
   const endsAt = document.getElementById("endsAt");
   const bidContainer = document.getElementById("bidContainer");
+  const viewBidsBtn = document.getElementById("view-bids-btn");
   const description = document.getElementById("description");
   const imagesContainer = document.getElementById("imagesContainer");
 
   title.innerHTML = listingDetails.title;
   mainImage.src = listingDetails.media[0];
   seller.innerHTML = listingDetails.seller.name;
+  viewBidsBtn.href = `/listings/listing/bid/?id=${listingDetails.id}`;
   description.innerHTML = listingDetails.description;
 
   sliceEndsAt(listingDetails, endsAt);
