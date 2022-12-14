@@ -2,7 +2,6 @@ import { formListener } from "./handlers/userData.mjs";
 import * as form from "./formVariables/index.mjs";
 import { createListing } from "./handlers/createListing.mjs";
 import { displayListings } from "./templates/listings.mjs";
-//import { listingTemplate } from "./templates/htmlTemplates/listing.mjs";
 import { getListing } from "./api/listings/read.mjs";
 import { getListings } from "./api/listings/read.mjs";
 import { displaySingleListing } from "./templates/listing.mjs";
@@ -19,18 +18,16 @@ switch (path) {
   case "/listings/":
     displayListings();
     break;
+  case "/listings/listing/":
+    displaySingleListing();
+    break;
   case "/listings/create-listing/":
     createListing(form.createListing);
     break;
 }
 
-displaySingleListing();
-//displayListings();
-
-/*
 const test = await getListing("f029b494-6327-44b4-930b-1872f1f2b087");
 
-console.log(test.description);
+console.log(test.media);
 
-getListings().then(console.log);
-*/
+//getListings().then(console.log);
