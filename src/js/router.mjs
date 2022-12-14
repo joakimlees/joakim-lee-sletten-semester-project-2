@@ -6,6 +6,8 @@ import { getListing } from "./api/listings/read.mjs";
 import { getListings } from "./api/listings/read.mjs";
 import { displaySingleListing } from "./templates/listing.mjs";
 import { displayBidHistory } from "./templates/bidHistory.mjs";
+import { API_AUCTION_URL } from "./api/constants.mjs";
+import { placeBid } from "./handlers/bid.mjs";
 
 const path = location.pathname;
 
@@ -24,11 +26,15 @@ switch (path) {
     break;
   case "/listings/listing/bid/":
     displayBidHistory();
+    placeBid(form.bid);
     break;
   case "/listings/create-listing/":
     createListing(form.createListing);
     break;
 }
+
+console.log(API_AUCTION_URL.slice());
+
 /*
 const test = await getListing("f029b494-6327-44b4-930b-1872f1f2b087");
 
