@@ -5,6 +5,7 @@ import { displayListings } from "./templates/listings.mjs";
 import { getListing } from "./api/listings/read.mjs";
 import { getListings } from "./api/listings/read.mjs";
 import { displaySingleListing } from "./templates/listing.mjs";
+import { displayBidHistory } from "./templates/bidHistory.mjs";
 
 const path = location.pathname;
 
@@ -20,6 +21,9 @@ switch (path) {
     break;
   case "/listings/listing/":
     displaySingleListing();
+    break;
+  case "/listings/listing/bid/":
+    displayBidHistory();
     break;
   case "/listings/create-listing/":
     createListing(form.createListing);
