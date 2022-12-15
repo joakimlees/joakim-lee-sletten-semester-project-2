@@ -9,7 +9,6 @@ import { displayBidHistory } from "./templates/bidHistory.mjs";
 import { API_AUCTION_URL } from "./api/constants.mjs";
 import { placeBid } from "./handlers/bid.mjs";
 import { load } from "./storage/load.mjs";
-import { getProfile } from "./api/user/profile.mjs";
 
 const path = location.pathname;
 
@@ -35,8 +34,7 @@ switch (path) {
     break;
 }
 
-const test = await getProfile();
-
+const test = load("profile");
 console.log(test);
 
 /*

@@ -1,4 +1,5 @@
 import { bid } from "../api/listings/bid.mjs";
+import { refreshProfile } from "../api/user/profile.mjs";
 
 export function placeBid(bidForm) {
   const url = new URL(location.href);
@@ -17,6 +18,7 @@ export function placeBid(bidForm) {
       amount: number,
     });
 
+    refreshProfile();
     bid(bidItem, id, action, method);
   });
 }
