@@ -20,6 +20,9 @@ switch (path) {
   case "/profile/":
     displayProfile();
     break;
+  case "/profile/edit/":
+    editProfile(form.editProfile);
+    break;
   case "/listings/":
     displayListings();
     break;
@@ -34,8 +37,6 @@ switch (path) {
     createListing(form.createListing);
     break;
 }
-
-editProfile(form.editProfile);
 
 /*
 const test = await getListing("f029b494-6327-44b4-930b-1872f1f2b087");
