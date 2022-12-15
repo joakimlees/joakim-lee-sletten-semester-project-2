@@ -1,6 +1,6 @@
 {
   "name": "auction-house-website-project",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Auction house website project - Semester project 2 at Noroff",
   "main": "index.js",
   "type": "module",
