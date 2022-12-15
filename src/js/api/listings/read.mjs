@@ -10,7 +10,7 @@ export function getListings() {
 
 export function getListing(id) {
   const listingURL = API_AUCTION_URL + "/listings/" + id + "?_seller=true&_bids=true";
-  const specificListing = apiRequest(listingURL);
+  const singleListing = apiRequest(listingURL);
 
-  return specificListing;
+  return singleListing;
 }

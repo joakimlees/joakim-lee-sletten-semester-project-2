@@ -8,6 +8,8 @@ import { displaySingleListing } from "./templates/listing.mjs";
 import { displayBidHistory } from "./templates/bidHistory.mjs";
 import { API_AUCTION_URL } from "./api/constants.mjs";
 import { placeBid } from "./handlers/bid.mjs";
+import { load } from "./storage/load.mjs";
+import { getProfile } from "./api/user/profile.mjs";
 
 const path = location.pathname;
 
@@ -33,7 +35,9 @@ switch (path) {
     break;
 }
 
-console.log(API_AUCTION_URL.slice());
+const test = await getProfile();
+
+console.log(test);
 
 /*
 const test = await getListing("f029b494-6327-44b4-930b-1872f1f2b087");
@@ -41,3 +45,7 @@ const test = await getListing("f029b494-6327-44b4-930b-1872f1f2b087");
 console.log(test.bids);
 
 getListings().then(console.log);*/
+
+//const test = load("profile");
+
+//console.log(test.username);
