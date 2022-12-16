@@ -12,17 +12,17 @@ export function singleListing(listingDetails) {
   const imagesContainer = document.getElementById("imagesContainer");
 
   title.innerHTML = listingDetails.title;
-  mainImage.src = listingDetails.media[0];
+  mainImage.src = listingDetails.images[0];
   seller.innerHTML = listingDetails.seller.name;
   viewBidsBtn.href = `/listings/listing/bid/?id=${listingDetails.id}`;
   description.innerHTML = listingDetails.description;
 
   sliceEndsAt(listingDetails, endsAt);
 
-  const bids = listingDetails.bids;
+  const bids = listingDetails.bidder;
   getHighestBid(bids, bidContainer);
 
-  const imagesArray = listingDetails.media;
+  const imagesArray = listingDetails.images;
   imagesArray.map((imageUrl) => {
     const imageWrapper = document.createElement("div");
     const image = document.createElement("img");
