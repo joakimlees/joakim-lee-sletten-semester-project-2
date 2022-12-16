@@ -14,6 +14,6 @@ export async function apiRequest(URL, options) {
   } catch (error) {
     return error;
   } finally {
-    console.log("dev note: javascript fetch() method finished");
+    console.log("dev note: javascript fetch() method finished - regular/unauthorized fetch");
   }
 }

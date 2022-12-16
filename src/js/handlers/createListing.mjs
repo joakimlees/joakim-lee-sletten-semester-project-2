@@ -1,4 +1,4 @@
-import { create } from "../api/listings/create.mjs";
+import { create } from "../api/listings/index.mjs";
 import { addImage } from "./components/addImage.mjs";
 
 export function createListing(listingForm) {

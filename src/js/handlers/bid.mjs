@@ -1,4 +1,4 @@
-import { bid } from "../api/listings/bid.mjs";
+import { bid } from "../api/listings/index.mjs";
 import { refreshProfile } from "../api/user/profile.mjs";
 
 export function placeBid(bidForm) {

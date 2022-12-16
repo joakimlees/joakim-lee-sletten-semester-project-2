@@ -11,13 +11,4 @@ export function create(listingDetails, action, method) {
   };
 
   authorizedApiRequest(createListingURL, authOptions);
-  /*
-  if (listingDetails.id) {
-    const createListingURL = `${API_AUCTION_URL}${action}/${listingDetails.id}`;
-    authorizedApiRequest(createListingURL, authOptions);
-  } else {
-    const createListingURL = API_AUCTION_URL + action;
-    authorizedApiRequest(createListingURL, authOptions);
-  }
-  */
 }

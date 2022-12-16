@@ -13,6 +13,6 @@ export async function authorizedApiRequest(URL, options) {
   } catch (error) {
     return console.log(error);
   } finally {
-    console.log("dev note: javascript fetch(auth) method finished");
+    console.log("dev note: javascript fetch() method finished - authorized fetch");
   }
 }
