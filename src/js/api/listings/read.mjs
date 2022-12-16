@@ -9,11 +9,11 @@ export async function getListings() {
   const myListingObject = result.map((listItem) => {
     const seller = listItem.seller;
 
-    const { name, email, avatar } = seller;
+    const { name, email, avatar, wins } = seller;
 
-    const { id, title, description, tags } = listItem;
+    const { id, title, description, tags, created, updated, endsAt, media } = listItem;
 
-    const newListings = new listingObject(id, title, description, tags);
+    const newListings = new listingObject(id, title, description, tags, created, updated, endsAt, media, name, email, avatar, wins);
     console.log(newListings);
     /*
     const { title, description, tags, media, created, updated, endsAt, seller, bids } = listing;
