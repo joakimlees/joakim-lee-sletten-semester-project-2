@@ -48,7 +48,7 @@
             </div>
             <div class="mb-3">
               <label for="images" class="display-4">Image</label>
-              <input name="images" type="url" class="form-control" />
+              <input name="images" type="url" class="form-control" pattern="/(http(s?):)([\/|.|\w|\s|-])*\.(?:jpg|png|jpeg|webp)/g" />
               <div class="d-flex justify-content-between mt-2">
                 <div><span class="text-primary">Images: </span><span id="image-count">0</span></div>
                 <button type="button" id="addImage-btn" class="btn btn-light w-50">Add image</button>
