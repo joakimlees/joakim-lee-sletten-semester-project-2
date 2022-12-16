@@ -19,7 +19,7 @@ export function singleListing(listingDetails) {
 
   sliceEndsAt(listingDetails, endsAt);
 
-  const bids = listingDetails.bidder;
+  const bids = listingDetails.bids;
   getHighestBid(bids, bidContainer);
 
   const imagesArray = listingDetails.images;

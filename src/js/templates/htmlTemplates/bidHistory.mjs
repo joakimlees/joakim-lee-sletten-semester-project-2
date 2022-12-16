@@ -10,8 +10,8 @@ export function bidHistory(listingDetails) {
   const bidHistoryContainer = document.getElementById("bid-history-container");
 
   title.innerHTML = listingDetails.title;
-  mainImage.src = listingDetails.media[0];
-  seller.innerHTML = listingDetails.seller.name;
+  mainImage.src = listingDetails.images[0];
+  seller.innerHTML = listingDetails.seller.username;
 
   sliceEndsAt(listingDetails, endsAt);
 
@@ -39,11 +39,11 @@ export function bidHistory(listingDetails) {
     timeName.appendChild(time);
 
     bidder.innerHTML = "Bidder: ";
-    bidderName.innerHTML = bidderName.innerHTML + bid.bidderName;
+    bidderName.innerHTML = bidderName.innerHTML + bid.bidder_username;
     amount.innerHTML = "Amount: ";
-    amountName.innerHTML = amountName.innerHTML + JSON.stringify(bid.amount);
+    amountName.innerHTML = amountName.innerHTML + JSON.stringify(bid.bid_amount);
     time.innerHTML = "Placed: ";
-    sliceEndsAt(bid.created, timeName);
+    sliceEndsAt(bid.bid_created, timeName);
 
     bidHistoryContainer.appendChild(bidWrapper);
 

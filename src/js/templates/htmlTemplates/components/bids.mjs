@@ -7,7 +7,7 @@ export function getHighestBid(bids, container) {
       container.innerHTML = JSON.stringify(bids[0].amount) + ",-";
       break;
     default:
-      const lastBid = bids[bids.length - 1].amount;
+      const lastBid = bids[bids.length - 1].bid_amount;
       const bidAmount = JSON.stringify(lastBid);
       container.innerHTML = bidAmount + ",-";
   }

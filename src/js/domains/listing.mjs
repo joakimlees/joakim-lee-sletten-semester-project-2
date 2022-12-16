@@ -9,7 +9,7 @@ export class listingObject {
     this.updated = updated;
     this.endsAt = endsAt;
     this.images = media;
-    this.bidder = bidder;
+    this.bids = bidder;
     this.seller = seller;
   }
 }

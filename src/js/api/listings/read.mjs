@@ -24,7 +24,7 @@ export async function getListings() {
 
     const myListingsObject = new domain.listingObject(id, title, description, tags, created, updated, endsAt, media, myBidderObject, mySellersObject);
 
-    //console.log(myListingsObject);
+    console.log(myListingsObject);
     return myListingsObject;
   });
 
