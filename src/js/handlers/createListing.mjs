@@ -1,6 +1,12 @@
 import { create } from "../api/listings/create.mjs";
+import { addImage } from "./components/addImage.mjs";
 
 export function createListing(listingForm) {
+  const addImageBtn = document.getElementById("addImage-btn");
+  const mediaArray = [];
+  addImageBtn.addEventListener("click", () => {
+    addImage(mediaArray);
+  });
   listingForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -12,15 +18,17 @@ export function createListing(listingForm) {
 
     const title = formData.get("title");
     const description = formData.get("description");
-    //const images = formData.get("images").split(", ");
     const endDate = new Date(formData.get("endsAt"));
 
     const listing = {
       title: title,
       description: description,
+      media: mediaArray,
       endsAt: endDate,
     };
 
-    create(listing, action, method);
+    return console.log(listing);
+
+    //create(listing, action, method);
   });
 }

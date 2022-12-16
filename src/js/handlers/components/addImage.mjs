@@ -1,19 +1,25 @@
 import { createListing } from "../../formVariables/createListing.mjs";
 
-const addImageBtn = document.getElementById("addImage-btn");
-const imageCount = document.getElementById("image-count");
+function imageUrlValidator(url) {
+  const pattern = /(^http[s]*:\/\/)([/^\S*$/])([a-z\-_0-9\/.]+)\.([a-z.]{2,3})\/([a-z0-9\-_\/._~:?#\[\]@!$&'()*+,;=%]*)([a-z0-9]+\.)(png|gif|webp|jpeg|jpg)($|\?.*$)/i;
+  const patternMatches = pattern.test(url.toLowerCase());
+  if (patternMatches) {
+    return url;
+  } else return null;
+}
 
-export function addImage() {
-  const imageArray = [];
+export function addImage(array) {
+  const imageInput = createListing.images;
+  const imageCount = document.getElementById("image-count");
 
-  addImageBtn.addEventListener("click", () => {
-    const imageInput = createListing.images;
-    const pattern = /(^http[s]*:\/\/)([/^\S*$/])([a-z\-_0-9\/.]+)\.([a-z.]{2,3})\/([a-z0-9\-_\/._~:?#\[\]@!$&'()*+,;=%]*)([a-z0-9]+\.)(png|gif|webp|jpeg|jpg)($|\?.*$)/i;
-    const matches = pattern.test(imageInput.value.toLowerCase());
+  const validatedImage = imageUrlValidator(imageInput.value);
 
-    imageArray.push(matches);
+  if (validatedImage) {
+    array.push(validatedImage);
+    imageCount.innerHTML = array.length;
     imageInput.value = "";
-    imageCount.innerHTML = imageArray.length;
-    console.log(imageArray);
-  });
+    return array;
+  } else {
+    console.log("error - image is: " + validatedImage);
+  }
 }
