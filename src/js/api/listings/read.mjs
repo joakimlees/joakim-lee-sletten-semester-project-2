@@ -7,7 +7,6 @@ export async function getListings() {
   const result = await apiRequest(listingsURL);
 
   const listingsObject = result.map((listItem) => {
-    const seller = listItem.seller;
     const bidderObject = listItem.bids;
 
     const myBidderObject = bidderObject.map((info) => {
@@ -16,6 +15,7 @@ export async function getListings() {
       return newObject;
     });
 
+    const seller = listItem.seller;
     const { name, email, avatar, wins } = seller;
 
     const mySellersObject = new domain.sellerObject(name, email, avatar, wins);
@@ -24,11 +24,11 @@ export async function getListings() {
 
     const myListingsObject = new domain.listingObject(id, title, description, tags, created, updated, endsAt, media, myBidderObject, mySellersObject);
 
-    console.log(myListingsObject);
-    //return myListingsObject;
+    //console.log(myListingsObject);
+    return myListingsObject;
   });
 
-  //return listingsObject;
+  return listingsObject;
 }
 
 export function getListing(id) {

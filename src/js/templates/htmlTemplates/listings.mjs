@@ -17,7 +17,7 @@ export function listingsTemplate(listingsDetails) {
   sliceEndsAt(listingsDetails, ends);
 
   const bidContainer = listingHtml.getElementById("bid");
-  const bids = listingsDetails.bids;
+  const bids = listingsDetails.bidder;
 
   getHighestBid(bids, bidContainer);
 
