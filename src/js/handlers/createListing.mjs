@@ -27,8 +27,7 @@ export function createListing(listingForm) {
       endsAt: endDate,
     };
 
-    return console.log(listing);
-
-    //create(listing, action, method);
+    console.log(listing);
+    create(listing, action, method);
   });
 }
