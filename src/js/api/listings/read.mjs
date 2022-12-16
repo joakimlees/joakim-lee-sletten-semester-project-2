@@ -1,11 +1,29 @@
 import { API_AUCTION_URL } from "../constants.mjs";
 import { apiRequest } from "../fetch/fetch.mjs";
+import { listingObject } from "../../domains/listing.mjs";
 
-export function getListings() {
+export async function getListings() {
   const listingsURL = API_AUCTION_URL + "/listings" + "?_seller=true&_bids=true";
-  const listOfListings = apiRequest(listingsURL);
+  const result = await apiRequest(listingsURL);
 
-  return listOfListings;
+  const myListingObject = result.map((listItem) => {
+    const seller = listItem.seller;
+
+    const { name, email, avatar } = seller;
+
+    const { id, title, description, tags } = listItem;
+
+    const newListings = new listingObject(id, title, description, tags);
+    console.log(newListings);
+    /*
+    const { title, description, tags, media, created, updated, endsAt, seller, bids } = listing;
+
+    const testReturn = new listingObject(listing.id, listing.title, listing.description, listing.tags, listing.media, listing.created, listing.updated, listing.endsAt, listing.seller, listing.bids);
+*/
+    //return myListingObject;
+  });
+
+  //return listOfListings;
 }
 
 export function getListing(id) {
