@@ -3,7 +3,11 @@ export class listingObject {
   constructor(id, title, description, tags, created, updated, endsAt, media, bidder, seller) {
     this.id = id;
     this.title = title;
-    this.description = description;
+    if (description === null || description === "") {
+      this.description = "No description provided";
+    } else {
+      this.description = description;
+    }
     this.tags = tags;
     this.created = created;
     this.updated = updated;
