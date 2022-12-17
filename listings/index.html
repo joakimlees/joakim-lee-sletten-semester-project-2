@@ -40,12 +40,11 @@
           <div class="custom-container-sm mx-auto px-2">
             <a class="btn btn-success w-100 my-4" href="./create-listing">Create Listing</a>
           </div>
-          <div class="custom-container-sm mx-auto row">
-            <button class="btn btn-light w-100 col mx-2">Sort</button>
-            <button class="btn btn-light w-100 col mx-2">Filter</button>
-          </div>
-          <form class="custom-container-sm mx-auto d-flex" id="searchForm">
-            <input name="searchbar" type="search" class="form-control mx-2 my-3" placeholder="Search listings here..." required />
+          <form class="custom-container-sm mx-auto d-flex row" id="searchForm">
+            <div class="row mx-auto w-100">
+              <label for="searchbar" class="form-label display-4">Search</label>
+              <input name="searchbar" type="search" class="form-control mx-auto mb-3" placeholder="Search listings here..." required />
+            </div>
           </form>
           <section class="container mt-5">
             <h2 class="text-primary h3">All listings</h2>
