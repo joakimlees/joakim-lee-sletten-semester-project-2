@@ -13,7 +13,8 @@ export function singleListing(listingDetails) {
 
   title.innerHTML = listingDetails.title;
   mainImage.src = listingDetails.images[0];
-  seller.innerHTML = listingDetails.seller.name;
+  mainImage.alt = "image for " + listingDetails.title;
+  seller.innerHTML = listingDetails.seller.username;
   viewBidsBtn.href = `/listings/listing/bid/?id=${listingDetails.id}`;
   description.innerHTML = listingDetails.description;
 
