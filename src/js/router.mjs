@@ -7,7 +7,7 @@ import { displayBidHistory } from "./templates/bidHistory.mjs";
 import { placeBid } from "./handlers/bid.mjs";
 import { displayProfile } from "./templates/profile.mjs";
 import { editProfile } from "./handlers/editProfile.mjs";
-import { searchTest } from "./search/search.mjs";
+import { searchSetUp } from "./search/search.mjs";
 
 const path = location.pathname;
 
@@ -39,7 +39,7 @@ switch (path) {
     break;
 }
 
-searchTest();
+searchSetUp();
 
 /*
 const test = await getListing("f029b494-6327-44b4-930b-1872f1f2b087");
