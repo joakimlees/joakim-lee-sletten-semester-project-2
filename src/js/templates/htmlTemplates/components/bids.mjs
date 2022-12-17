@@ -1,14 +1,16 @@
 export function getHighestBid(bids, container) {
+  const allBidAmounts = [];
+  bids.forEach((bid) => {
+    allBidAmounts.push(bid.bid_amount);
+  });
+
+  const highestBidAmount = Math.max(...allBidAmounts);
+
   switch (bids.length) {
     case 0:
       container.innerHTML = "no bids yet";
       break;
-    case 1:
-      container.innerHTML = JSON.stringify(bids[0].bid_amount) + ",-";
-      break;
     default:
-      const lastBid = bids[bids.length - 1].bid_amount;
-      const bidAmount = JSON.stringify(lastBid);
-      container.innerHTML = bidAmount + ",-";
+      container.innerHTML = JSON.stringify(highestBidAmount) + ",-";
   }
 }
