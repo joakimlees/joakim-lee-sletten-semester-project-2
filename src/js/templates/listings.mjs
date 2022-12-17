@@ -6,7 +6,6 @@ export async function displayListings() {
   const container = document.querySelector("#listings-container");
   const listingsData = await getListings();
 
-  searchSetUp(listingsData);
-
+  searchSetUp(listingsData, container);
   renderListings(listingsData, container);
 }
