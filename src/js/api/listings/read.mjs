@@ -3,7 +3,7 @@ import { apiRequest } from "../fetch/fetch.mjs";
 import * as domain from "../../domains/index.mjs";
 
 export async function getListings() {
-  const listingsURL = API_AUCTION_URL + "/listings" + "?_seller=true&_bids=true";
+  const listingsURL = API_AUCTION_URL + "/listings" + "?_seller=true&_bids=true&sort=created&active=true";
   const result = await apiRequest(listingsURL);
 
   const listingsObject = result.map((listItem) => {
@@ -24,7 +24,7 @@ export async function getListings() {
 
     const myListingsObject = new domain.listingObject(id, title, description, tags, created, updated, endsAt, media, myBidderObject, mySellersObject);
 
-    console.log(myListingsObject);
+    //console.log(myListingsObject);
     return myListingsObject;
   });
 

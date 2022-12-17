@@ -7,6 +7,7 @@ import { displayBidHistory } from "./templates/bidHistory.mjs";
 import { placeBid } from "./handlers/bid.mjs";
 import { displayProfile } from "./templates/profile.mjs";
 import { editProfile } from "./handlers/editProfile.mjs";
+import { searchTest } from "./search/search.mjs";
 
 const path = location.pathname;
 
@@ -37,6 +38,8 @@ switch (path) {
     createListing(form.createListing);
     break;
 }
+
+searchTest();
 
 /*
 const test = await getListing("f029b494-6327-44b4-930b-1872f1f2b087");
