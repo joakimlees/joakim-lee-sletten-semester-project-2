@@ -40,11 +40,11 @@
           <form id="loginForm" method="post" action="/auth/login" class="custom-container-sm mx-auto">
             <div class="mb-3">
               <label for="email" class="display-4">Email</label>
-              <input name="email" type="email" class="form-control" aria-describedby="email-address" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only users with a (stud.)noroff.no email-address are allowed to register" placeholder="example@stud.noroff.no" required />
+              <input name="email" type="email" class="form-control" aria-describedby="email-address" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only users with a (stud.)noroff.no email-address are allowed to register" required />
             </div>
             <div class="mb-3">
               <label for="password" class="display-4">Password</label>
-              <input name="password" type="password" class="form-control" minlength="8" placeholder="must be at least 8 characters" title="Password must be at least 8 characters" required />
+              <input name="password" type="password" class="form-control" minlength="8" title="Password must be at least 8 characters" required />
             </div>
             <button class="btn btn-primary w-100 mt-3">Login</button>
           </form>
