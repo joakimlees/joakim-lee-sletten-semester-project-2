@@ -24,7 +24,6 @@ export async function getListings() {
 
     const myListingsObject = new domain.listingObject(id, title, description, tags, created, updated, endsAt, media, myBidderObject, mySellersObject);
 
-    //console.log(myListingsObject.description);
     return myListingsObject;
   });
 
@@ -54,13 +53,3 @@ export async function getListing(id) {
 
   return myListingObject;
 }
-
-/*export function getListing(id) {
-  const listingURL = API_AUCTION_URL + "/listings/" + id + "?_seller=true&_bids=true";
-  const singleListing = apiRequest(listingURL);
-
-
-
-
-  return singleListing;
-}*/

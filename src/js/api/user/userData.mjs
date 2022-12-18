@@ -71,14 +71,3 @@ export async function authUser(profile, action, method) {
     }
   }
 }
-
-/*
-name oaklees
-email oakless@stud.noroff.no
-
-ross_geller
-ross_geller@stud.noroff.no
-
-turbo_lees
-turbo_lees@stud.noroff.no
-*/
