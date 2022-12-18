@@ -1,16 +1,18 @@
 export function loginSuccess(container) {
-  container.innerHTML = `<div class="w-100 d-flex flex-column align-items-center mt-4 mb-5">
-                          <p class="text-success display-3">You are now logged in<p>
-                          <div class="w-100">
-                            <button id="continue-button" class="btn btn-success mx-auto w-100">Continue to profile</button>
-                          </div>
-                         </div> `;
+  if (container) {
+    container.innerHTML = `<div class="w-100 d-flex flex-column align-items-center mt-4 mb-5">
+    <p class="text-success display-3">You are logged in<p>
+    <div class="w-100">
+      <button id="continue-button" class="btn btn-success mx-auto w-100">Continue to profile</button>
+    </div>
+   </div> `;
 
-  const continueBtn = document.querySelector("#continue-button");
+    const continueBtn = document.querySelector("#continue-button");
 
-  continueBtn.addEventListener("click", () => {
-    location.href = "../";
-  });
+    continueBtn.addEventListener("click", () => {
+      location.href = "../";
+    });
+  }
 }
 
 export function loginFailure(element, message) {

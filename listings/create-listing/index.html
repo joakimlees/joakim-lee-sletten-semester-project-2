@@ -58,10 +58,12 @@
               <label for="endsAt" class="display-4">Ends at</label>
               <input name="endsAt" type="datetime-local" class="form-control" aria-describedby="listing end date" />
             </div>
-            <button class="btn btn-success w-100 mt-3">Put up for bids</button>
+            <div id="create-listing-error" class="display-4 text-danger text-center"></div>
+            <div id="create-listing-success" class="display-4 text-success text-center"></div>
+            <button id="create-listing-btn" class="btn btn-success w-100 mt-3">Put up for bids</button>
           </form>
           <div class="custom-container-sm mx-auto mt-4">
-            <a href="../index.html" class="btn btn-danger w-100">Discard and go back to listings</a>
+            <a href="../index.html" id="discard-btn" class="btn btn-danger w-100">Discard and go back to listings</a>
           </div>
         </main>
       </div>

@@ -7,6 +7,7 @@ export function createListing(listingForm) {
   addImageBtn.addEventListener("click", () => {
     addImage(mediaArray);
   });
+
   listingForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
