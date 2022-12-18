@@ -2,6 +2,14 @@ import { API_AUCTION_URL } from "../constants.mjs";
 import { apiRequest } from "../fetch/fetch.mjs";
 import * as domain from "../../domains/index.mjs";
 
+/**
+ * fetching the listings from the api.
+ * destructuring the object returned.
+ * making a new object with the "domain" classes.
+ * returning the new object(s).
+ *
+ * @returns
+ */
 export async function getListings() {
   const listingsURL = API_AUCTION_URL + "/listings" + "?_seller=true&_bids=true&sort=created&active=true";
   const result = await apiRequest(listingsURL);
