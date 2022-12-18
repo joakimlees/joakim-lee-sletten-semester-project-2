@@ -7,7 +7,7 @@ import { displayBidHistory } from "./templates/bidHistory.mjs";
 import { placeBid } from "./handlers/bid.mjs";
 import { displayProfile } from "./templates/profile.mjs";
 import { editProfile } from "./handlers/editProfile.mjs";
-import { searchSetUp } from "./search/search.mjs";
+import { navChanges } from "./ux-js/navChanges.mjs";
 
 const path = location.pathname;
 
@@ -39,6 +39,7 @@ switch (path) {
     break;
 }
 
+navChanges();
 //searchSetUp();
 
 /*
