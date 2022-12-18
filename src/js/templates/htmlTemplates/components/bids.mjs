@@ -1,3 +1,10 @@
+/**
+ *
+ * Function for finding the highest number of the bid_amount property of all the objects in the array.
+ * and displaying it in the container/html element.
+ * @param {object} bids
+ * @param {HTMLElement} container
+ */
 export function getHighestBid(bids, container) {
   const allBidAmounts = [];
   bids.forEach((bid) => {
