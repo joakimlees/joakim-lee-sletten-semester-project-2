@@ -3,8 +3,8 @@ import { authorizedApiRequest } from "../fetch/authFetch.mjs";
 import * as storage from "../../storage/index.mjs";
 import * as domain from "../../domains/index.mjs";
 
-export async function editProfile(avatar, username, action, method) {
-  const editProfileURL = `${API_AUCTION_URL}${action}${username}/media`;
+export async function editProfile(avatar, username, method) {
+  const editProfileURL = `${API_AUCTION_URL}/profiles/${username}/media`;
   const body = avatar;
 
   const authOptions = {

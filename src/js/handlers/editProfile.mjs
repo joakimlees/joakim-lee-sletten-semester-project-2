@@ -13,7 +13,6 @@ export function editProfile(editForm) {
 
     const form = event.target;
     const method = "put";
-    const action = form.attributes.action.value;
 
     const newAvatar = form.avatar.value;
 
@@ -21,6 +20,6 @@ export function editProfile(editForm) {
       avatar: newAvatar,
     });
 
-    api.editProfile(avatarItem, user, action, method);
+    api.editProfile(avatarItem, user, method);
   });
 }
