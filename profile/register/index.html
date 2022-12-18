@@ -22,16 +22,16 @@
         <nav role="navigation" class="bg-dark navbar justify-content-center mb-5">
           <ul class="container-fluid justify-content-around navbar-nav flex-row">
             <li class="nav-item">
-              <a class="bi bi-house-door text-light nav-link d-flex flex-column text-center" href="../../listings">Listings</a>
+              <a class="bi bi-house-door text-light nav-link d-flex flex-column text-center" href="../../listings">Home</a>
             </li>
             <li class="nav-item">
-              <a class="bi bi-heart text-light nav-link d-flex flex-column text-center" href="#">Favorites</a>
+              <a class="bi bi-bell text-light nav-link d-flex flex-column text-center" href="../../listings">Listings</a>
             </li>
             <li class="nav-item">
-              <a class="bi bi-person text-light nav-link d-flex flex-column text-center" href="#">Register</a>
+              <a class="bi bi-person text-light nav-link d-flex flex-column text-center" href="./">Register</a>
             </li>
             <li class="nav-item">
-              <a class="bi bi-box-arrow-left text-light nav-link d-flex flex-column text-center" href="../login">Login</a>
+              <a class="bi bi-box-arrow-right text-light nav-link d-flex flex-column text-center" href="../login">Login</a>
             </li>
           </ul>
         </nav>
@@ -44,11 +44,11 @@
             </div>
             <div class="mb-3">
               <label for="email" class="display-4">Email</label>
-              <input name="email" type="email" class="form-control" aria-describedby="email-address" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only users with a (stud.)noroff.no email-address are allowed to register" placeholder="example@stud.noroff.no" required />
+              <input name="email" type="email" class="form-control" aria-describedby="email-address" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only users with a (stud.)noroff.no email-address are allowed to register" required />
             </div>
             <div class="mb-3">
               <label for="password" class="display-4">Password</label>
-              <input name="password" type="password" class="form-control" minlength="8" placeholder="must be at least 8 characters" title="Password must be at least 8 characters" required />
+              <input name="password" type="password" class="form-control" minlength="8" title="Password must be at least 8 characters" required />
             </div>
             <div class="mb-3">
               <label for="avatar" class="display-4">Profile image</label>
@@ -62,8 +62,10 @@
           </div>
         </main>
       </div>
-      <footer class="container-fluid bg-light text-black mt-5">
-        <p class="container pt-5 pb-5 h6">Auction House</p>
+      <footer class="container-fluid bg-light text-black mt-5 pb-5">
+        <div class="container mx-auto mt-5">
+          <a href="../../" class="text-dark container pt-5 h6 text-decoration-none">Auction House</a>
+        </div>
       </footer>
     </div>
   </body>
