@@ -17,6 +17,11 @@ export function searchSetUp(listings, container) {
 
       return title.includes(searchTerm) || description.includes(searchTerm) || seller.includes(searchTerm) || tagsMatch;
     });
-    renderListings(filteredListings, container);
+
+    if (filteredListings.length > 0) {
+      renderListings(filteredListings, container);
+    } else {
+      container.innerHTML = "No listings match your search term";
+    }
   });
 }

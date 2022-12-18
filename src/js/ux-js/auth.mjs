@@ -1,5 +1,6 @@
 import * as storage from "../storage/index.mjs";
 import { loggedIn, loggedOut } from "./components/navChanges.mjs";
+import { changeContent } from "./components/changeContent.mjs";
 
 export function authUx(pathRegister, pathProfile) {
   const profileRegister = document.getElementById("nav-profile-register");
@@ -9,6 +10,7 @@ export function authUx(pathRegister, pathProfile) {
 
   if (token === null || token === undefined) {
     loggedOut(pathRegister, profileRegister, loginLogout);
+    changeContent();
   } else if (token.length >= 30 || profile.email || profile.email.includes("noroff")) {
     loggedIn(pathProfile, profileRegister, loginLogout);
     loginLogout.addEventListener("click", () => {
