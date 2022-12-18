@@ -1,4 +1,6 @@
 /**
+ *
+ * function for handling fetch request.
  * Sends a request to a server/api/url, converting the response to json, and returning it.
  * catches any errors.
  * @param {string} URL The url which to send the request.
