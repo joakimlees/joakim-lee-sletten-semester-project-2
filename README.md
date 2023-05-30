@@ -21,16 +21,48 @@ The goal here was to make a auction house website, where the following user stor
 - SCSS
 - Vanilla Javascript with emphasizes on: Array methods, synchronous/asynchronous code, network requests, ES6 modules, Destructuring objects and some OOP.
 
-## Install and run
+### Dependencies
 
-Open terminal and run:
+"bootstrap": "^5.2.3"
 
 ```
-npm install npm run build
+npm i bootstrap
+```
+
+## Getting started
+
+### Clone the repository
+
+Clone this repository by pasting this code in your terminal:
+
+```
+git clone https://github.com/joakimlees/joakim-lee-sletten-semester-project-2.git
+```
+
+### Install and run:
+
+```
+npm install
+```
+
+```
+npm run build
 ```
 
 or
 
 ```
-npm install npm run watch
+npm install
 ```
+
+```
+npm run watch
+```
+
+## Contributing
+
+For any contributions, make sure to open a pull request so that code can be reviewed.
+
+## Contact
+
+[My LinkedIn page](https://www.linkedin.com/in/joakim-lee-sletten-14381621a/)
