@@ -21,12 +21,16 @@ The goal here was to make a auction house website, where the following user stor
 - SCSS
 - Vanilla Javascript with emphasizes on: Array methods, synchronous/asynchronous code, network requests, ES6 modules, Destructuring objects and some OOP.
 
-### Install and run
+## Install and run
 
 Open terminal and run:
 
+```
 npm install npm run build
+```
 
 or
 
+```
 npm install npm run watch
+```
